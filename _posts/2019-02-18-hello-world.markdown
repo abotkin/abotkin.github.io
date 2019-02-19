@@ -2,7 +2,7 @@
 layout: post
 title:  "Hello,  🌎!"
 date:   2019-02-18 13:37:00 -0800
-categories: misc helloworld 🌎
+categories: [iOS, ObjC, Misc]
 ---
 In the beginning the Programmer created the `main.m`.
 
