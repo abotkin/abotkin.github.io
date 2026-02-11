@@ -14,13 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: abotk.in
-email: xerxes@fleecethewhal.es
+email: xerxes@amorphous.me
 description: >- # this means to ignore newlines until "baseurl:"
   Living the ObjC life in a Swift-y world
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://abotk.in" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: axbotkin
-github_username: abotkin-cpi
+github_username: abotkin
 linkedin_username: abotkin
 
 # Build settings
