@@ -32,6 +32,14 @@ plugins:
 
 permalink: /:title/
 
+# Match the compressed CSS GitHub Pages produced; quiet_deps silences
+# Dart Sass deprecation warnings from minima 2.5's stylesheets
+sass:
+  style: compressed
+  sourcemap: never
+  quiet_deps: true
+  silence_deprecations: [import]
+
 google_analytics: G-FBLH4KNSXX
 
 # Exclude from processing.
