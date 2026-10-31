@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Jekyll static site blog ("abotk.in") hosted on GitHub Pages. Personal blog focused on iOS/macOS development topics.
+Jekyll static site blog ("abotk.in") hosted on GitHub Pages, built and deployed by GitHub Actions (`.github/workflows/pages.yml`). Personal blog focused on iOS/macOS development topics.
 
 ## Build & Development Commands
 
@@ -16,9 +16,11 @@ bundle exec jekyll build    # Build static site to _site/
 
 ## Architecture
 
-Standard Jekyll site using the `minima` theme with `github-pages` gem (Jekyll 3.9.3):
+Standard Jekyll 4 site using the `minima` theme. It does not use the `github-pages` gem, so dependencies are whatever `Gemfile.lock` pins:
 
-- **`_config.yml`** — Site config: kramdown markdown, `/:title/` permalinks, minima theme
+- **`_config.yml`** — Site config: kramdown markdown, `/:title/` permalinks, minima theme, compressed Sass output
+- **`.github/workflows/pages.yml`** — Builds on PRs; builds and deploys to Pages on push to `main` (actions pinned by SHA)
+- **`.github/dependabot.yml`** — Weekly bundler and GitHub Actions updates
 - **`_posts/`** — Blog posts as `YYYY-MM-DD-slug.markdown` with YAML front matter
 - **`_includes/head.html`** — Custom HEAD partial (overrides minima's default for favicon support)
 - **`index.md`**, **`about.md`**, **`tags.html`**, **`404.html`** — Top-level pages
