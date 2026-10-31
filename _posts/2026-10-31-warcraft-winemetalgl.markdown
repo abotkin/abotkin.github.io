@@ -4,6 +4,25 @@ title:  Warcraft Remastered on macOS via WineMetalGL
 date:   2026-10-31 10:53:00 -0700
 categories: [macOS, CrossOver, Warcraft, WineMetalGL, Intel, Apple Silicon, arm64, x86_64, Universal]
 ---
+<div class="callout" markdown="1">
+<p class="callout-title">⚡ Quick Start Guide: Warcraft I & II Remastered in CrossOver</p>
+
+For those interested in getting set up quickly (rather than reading on the journey), here’s the steps:
+
+1. In CrossOver, install the **Battle.net Desktop App** into a new bottle, then install Warcraft I: Remastered and Warcraft II: Remastered from Battle.net.
+2. Quit Battle.net, then install the [latest WineMetalGL release](https://github.com/metalsharp/WineMetalGL/releases/latest) into that bottle. Either open `WineMetalGL-Settings-<version>.dmg` and use **Install Crossover**, or download `install-crossover.sh` from the release and run in the Terminal app (found in `/Application/Utilities`):
+   ```
+   sh install-crossover.sh "Battle.net Desktop App"
+   ```
+3. For Warcraft I: Remastered, use Terminal again to fix the audio static by switching SDL to DirectSound:
+   ```
+   /Applications/CrossOver.app/Contents/SharedSupport/CrossOver/bin/wine --bottle "Battle.net Desktop App" reg add "HKCU\Environment" /v SDL_AUDIODRIVER /d directsound /f
+   ```
+4. Reopen Battle.net and press Play. Run the installer again after a CrossOver update.
+
+Use your bottle's name if it isn't "Battle.net Desktop App". Tested with CrossOver 26.3 and WineMetalGL 3.7.0.
+</div>
+
 With the end of Intel support being pushed heavily by Apple since the release of macOS 27 Golden Gate, I took the opportunity to upgrade my workspace from a 2020 Intel iMac 5k with 128 GB of RAM to the new 2026 Mac Studio with 128 GB of RAM. With this transition, however, I’m having to finally bid farewell to my Boot Camp partition for Windows, which has helped me to run Windows only games and apps for almost 20 years since its release in 2007. While the state of macOS gaming is much brighter than it was 20 years back with a wealth of AAA games coming to macOS on platforms like Steam these days, there are still some games I’m very attached to that are not.
 
 ## Warcraft II: Remastered on Apple Silicon

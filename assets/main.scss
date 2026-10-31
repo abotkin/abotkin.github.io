@@ -1,0 +1,34 @@
+---
+# Overrides minima's assets/main.scss: keeps the theme and adds site styles.
+---
+
+@import "minima";
+
+// Callout box, e.g. <div class="callout" markdown="1">…</div> in a post.
+.callout {
+  margin: 0 0 $spacing-unit;
+  padding: 16px 20px;
+  background-color: #eef4fd;
+  border: 1px solid #c9dcf7;
+  border-left: 4px solid $brand-color;
+  border-radius: 8px;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  .callout-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  pre,
+  code {
+    background-color: #fff;
+  }
+
+  ol,
+  ul {
+    margin-bottom: 10px;
+  }
+}
